@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
         plugin = {
                 "com.cucumber.hooks.CucumberListener",
                 "pretty",
-                "html:target/cucumber-reports/TestRunnerLoginSaucelab.html",
-                "json:target/cucumber-reports/TestRunnerLoginSaucelab.json",
+                "html:target/cucumber-reports/TestRunnerSaucelab.html",
+                "json:target/cucumber-reports/TestRunnerSaucelab.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
