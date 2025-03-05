@@ -2,10 +2,7 @@ package com.cucumber.hooks;
 
 import com.cucumber.driver.DriverManager;
 import com.cucumber.driver.TargetFactory;
-import com.cucumber.projects.website.cms.pages.CommonPageCMS;
-import com.cucumber.projects.website.cms.pages.DashboardPage;
-import com.cucumber.projects.website.cms.pages.LoginPage;
-import com.cucumber.projects.website.cms.pages.ProductPage;
+import com.cucumber.projects.website.saucelab.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 
@@ -17,40 +14,33 @@ public class TestContext {
         DriverManager.setDriver(driver);
     }
 
-    private LoginPage loginPage;
-    private CommonPageCMS commonPage;
-    private DashboardPage dashboardPage;
-    private ProductPage productPage;
+    private SauceLoginPage sauceLoginPage;
+    private SauceProductPage sauceProductPage;
+    private SauceCartPage sauceCartPage;
 
-    public LoginPage getLoginPage() {
-        if (loginPage == null) {
-            loginPage = new LoginPage();
+
+
+    public SauceLoginPage getsauceLoginPage() {
+        if (sauceLoginPage == null) {
+            sauceLoginPage = new SauceLoginPage();
         }
-        return loginPage;
+        return sauceLoginPage;
     }
 
-    public CommonPageCMS getCommonPage() {
-        if (commonPage == null) {
-            commonPage = new CommonPageCMS();
+    public SauceProductPage getsauceProductPage() {
+        if (sauceProductPage == null) {
+            sauceProductPage = new SauceProductPage();
         }
-        return commonPage;
+        return sauceProductPage;
     }
 
-    public DashboardPage getDashboardPage() {
-
-        if (dashboardPage == null) {
-            dashboardPage = new DashboardPage();
+    public SauceCartPage getsauceCartPage() {
+        if (sauceCartPage == null) {
+            sauceCartPage = new SauceCartPage();
         }
-        return dashboardPage;
+        return sauceCartPage;
     }
 
-    public ProductPage getProductPage() {
-
-        if (productPage == null) {
-            productPage = new ProductPage();
-        }
-        return productPage;
-    }
 
     public WebDriver getDriver() {
         return DriverManager.getDriver();

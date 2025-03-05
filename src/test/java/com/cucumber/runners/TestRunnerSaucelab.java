@@ -7,25 +7,25 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/LoginCMS.feature",
+        features = "src/test/resources/features",
         glue = {
-                "com.cucumber.projects.website.cms.stepdefinitions",
+                "com.cucumber.projects.website.saucelab.stepdefinitions",
                 "com.cucumber.hooks"
         },
         plugin = {
                 "com.cucumber.hooks.CucumberListener",
                 "pretty",
-                "html:target/cucumber-reports/TestRunnerLoginCMS.html",
-                "json:target/cucumber-reports/TestRunnerLoginCMS.json",
+                "html:target/cucumber-reports/TestRunnerLoginSaucelab.html",
+                "json:target/cucumber-reports/TestRunnerLoginSaucelab.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,
         //tags = "@Regression or @Smoke"
-        tags = "@Regression"
+        tags = "@Saucedemo"
 )
 
-public class TestRunnerLoginCMS extends AbstractTestNGCucumberTests {
+public class TestRunnerSaucelab extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
