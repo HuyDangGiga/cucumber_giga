@@ -5,6 +5,9 @@
 - Java Development Kit (JDK) 17
 - Maven 3.6.0 or higher
 - IntelliJ IDEA 
+  - Plugin Cucumber for Java
+  - Plugin Gherkin
+
 
 ## Installation
 
