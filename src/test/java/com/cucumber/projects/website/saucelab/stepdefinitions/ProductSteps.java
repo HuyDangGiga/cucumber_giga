@@ -28,18 +28,4 @@ public class ProductSteps {
         sauceProductPage.navigateToCartPage();
     }
 
-    @Then("verify {string} are on the cart")
-    public void verifyProductInCart(String product_name){
-        sauceCartPage.verifyProductInCart(product_name);
-    }
-
-    @Then("verify {string} are out the cart")
-    public void verifyProductOutCart(String product_name){
-        sauceCartPage.verifyProductOutCart(product_name);
-    }
-
-    @When("user remove {string} out of cart")
-    public void removeProductInCart(String product_name){
-        sauceCartPage.removeProductInCart(product_name);
-    }
 }
