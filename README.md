@@ -41,3 +41,12 @@
 * **features**: path to the feature files
 * **glue**: path to the step definitions and hooka
 * **tags**: tagged screnarios to run
+
+**Extent Report**
+* The report is generated in the `target/cucumber-reports` directory after running the tests.
+* OPEN_REPORTS_AFTER_EXECUTION: default to open the report after the test execution.
+* Turn off in config.properties file: `OPEN_REPORTS_AFTER_EXECUTION=false`
+
+**Allure Report**
+* The report is generated in the `target/allure-results` directory after running the tests.
+* To view the report, run the following command in the terminal: `allure serve target/allure-results`
